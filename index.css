@@ -1,0 +1,240 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: Poppins-BoldItalic;
+  src: url(assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Poppins-ExtraBold;
+  src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Poppins-ExtraBoldItalic;
+  src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: Poppins-Italic;
+  src: url(assets/fonts/Poppins-Italic.ttf);
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+* {
+  font-family: Poppins-Regular;
+  margin: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Off-white);
+}
+
+.wrapper {
+  height: 60%;
+  width: 42%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 18px 18px 150px 18px;
+  padding: 3rem 3rem 3rem 3rem;
+}
+fieldset {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 0 0;
+}
+
+input {
+  width: 7rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 32px;
+  font-family: Poppins-Bold;
+  color: hsl(0, 0%, 0%);
+  border: 1px solid var(--Light-grey);
+  border-radius: 7px;
+}
+input:focus,
+input:hover,
+input::selection {
+  border: 1px solid var(--Purple);
+  outline: none !important;
+}
+.inputError {
+  border: 1px solid var(--Light-red);
+  outline: none !important;
+}
+.label {
+  padding: 4px 0;
+  font-size: 12px;
+  font-family: Poppins-Bold;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 3px;
+}
+.errorText {
+  color: var(--Light-red);
+  margin: 8px 0;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  display: none;
+}
+.buttonBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+button {
+  width: 5.5rem;
+  height: 5rem;
+  background-color: var(--Purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+}
+button:hover,
+button:focus {
+  background-color: black;
+}
+img {
+  width: 40px;
+  height: 38px;
+}
+
+hr {
+  border: 0.5px solid var(--Light-grey);
+  width: 100%;
+}
+.mobileLine {
+  display: none;
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 5.1rem;
+  letter-spacing: 1px;
+  font-family: Poppins-ExtraBoldItalic;
+}
+
+h1 span {
+  color: var(--Purple);
+  font-size: 5rem;
+  letter-spacing: 0.5px;
+  font-family: Poppins-ExtraBoldItalic;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 1160px) {
+  h1 {
+    font-size: 3.1rem;
+    line-height: 4.3rem;
+  }
+
+  h1 span {
+    font-size: 3.1rem;
+  }
+  input {
+    width: 3rem;
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 635px) {
+  .wrapper {
+    overflow-x: hidden;
+    width: 80%;
+    margin: 0.5rem;
+    border-radius: 18px 18px 100px 18px;
+    padding: 1rem 1rem;
+    box-sizing: content-box;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  h1 span {
+    font-size: 3.5rem;
+  }
+  input {
+    width: 2.8rem;
+    height: 2.1rem;
+    font-size: 16px;
+  }
+  button {
+    width: 9rem;
+    height: 4.3rem;
+    margin-bottom: 2rem;
+  }
+  img {
+    width: 30px;
+    height: 28px;
+  }
+  .buttonBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .mobileLine {
+    display: flex;
+  }
+}
+@media all and (max-width: 371px) {
+  input {
+    width: 2rem;
+    height: 2rem;
+    font-size: 16px;
+    color: black;
+    padding-right: 0.5rem;
+  }
+  input::placeholder {
+    opacity: 0;
+  }
+  h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  h1 span {
+    font-size: 2.6rem;
+  }
+  .buttonBox {
+    margin-top: 1rem;
+  }
+}
